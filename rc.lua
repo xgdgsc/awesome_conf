@@ -83,6 +83,10 @@ myawesomemenu = {
    { "restart", awesome.restart },
    { "quit", awesome.quit },
    { "Log out",'/home/gsc/Documents/awesomeDialog.sh'},
+   { "Reboot",'sudo reboot'},
+   { "Shutdown",'sudo shutdown now'},
+   { "Suspend",'gnome-screensaver-command -l&&gksudo pm-suspend'},
+
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
@@ -377,9 +381,9 @@ do
 local cmds =
 {
 "nm-applet",
-"python ~/local/startup.py",
-"python ~/goagent/local/proxy.py",
-"python ~/goagent-6/local/proxy.py",
+"python2 ~/local/startup.py",
+"python2 ~/goagent/local/proxy.py",
+"python2 ~/goagent-6/local/proxy.py",
 "launchy",
 "/usr/lib/gnome-settings-daemon/gnome-settings-daemon",
 "bluetooth-applet",
@@ -393,3 +397,12 @@ for _,i in pairs(cmds) do
 awful.util.spawn(i)
 end
 end
+
+-- alt+tab
+    awful.key({ "Alt_L", }, "Tab",
+        function ()
+            awful.client.focus.history.previous()
+            if client.focus then
+                client.focus:raise()
+            end
+        end)
