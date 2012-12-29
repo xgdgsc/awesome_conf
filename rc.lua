@@ -390,8 +390,8 @@ local cmds =
 "gnome-sound-applet",
 "gnome-screensaver",
 "gnome-power-manager",
-"/home/gsc/Documents/dp.sh",
-"fcitx"
+"fcitx",
+"dropboxd"
 }
 for _,i in pairs(cmds) do
 awful.util.spawn(i)
