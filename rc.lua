@@ -384,6 +384,7 @@ local cmds =
 "/usr/lib/gnome-settings-daemon/gnome-settings-daemon",
 "bluetooth-applet",
 "gnome-sound-applet",
+"gnome-screensaver",
 "~/Documents/dp.sh",
 "fcitx"
 }
@@ -391,5 +392,3 @@ for _,i in pairs(cmds) do
 awful.util.spawn(i)
 end
 end
-
-
