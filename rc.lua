@@ -385,6 +385,7 @@ local cmds =
 "bluetooth-applet",
 "gnome-sound-applet",
 "gnome-screensaver",
+"gnome-power-manager",
 "~/Documents/dp.sh",
 "fcitx"
 }
