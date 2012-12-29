@@ -390,7 +390,7 @@ local cmds =
 "gnome-sound-applet",
 "gnome-screensaver",
 "gnome-power-manager",
-"~/Documents/dp.sh",
+"/home/gsc/Documents/dp.sh",
 "fcitx"
 }
 for _,i in pairs(cmds) do
