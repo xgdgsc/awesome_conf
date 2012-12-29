@@ -381,9 +381,9 @@ do
 local cmds =
 {
 "nm-applet",
-"python2 ~/local/startup.py",
-"python2 ~/goagent/local/proxy.py",
-"python2 ~/goagent-6/local/proxy.py",
+"python2 /home/gsc/local/startup.py",
+"python2 /home/gsc/goagent/local/proxy.py",
+"python2 /home/gsc/goagent-6/local/proxy.py",
 "launchy",
 "/usr/lib/gnome-settings-daemon/gnome-settings-daemon",
 "bluetooth-applet",
