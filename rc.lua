@@ -391,7 +391,9 @@ local cmds =
 "gnome-screensaver",
 "gnome-power-manager",
 "fcitx",
-"dropboxd"
+"dropboxd",
+"mkdir /tmp/chromium",
+"easystroke",
 }
 for _,i in pairs(cmds) do
 awful.util.spawn(i)
