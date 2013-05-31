@@ -93,7 +93,11 @@ myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
-   { "quit", awesome.quit }
+   { "quit", awesome.quit },
+   { "Log out","/home/gsc/Documents/awesomeDialog.sh"},
+   { "Reboot","sudo reboot"},
+   { "Shutdown","sudo shutdown -h now"},
+   { "Suspend","/home/gsc/Documents/awesomeSuspend.sh"}
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
@@ -275,7 +279,9 @@ globalkeys = awful.util.table.join(
     -- Custom
     awful.key({ }, "XF86AudioRaiseVolume",  APW.Up),
     awful.key({ }, "XF86AudioLowerVolume",  APW.Down),
-    awful.key({ }, "XF86AudioMute",         APW.ToggleMute)
+    awful.key({ }, "XF86AudioMute",         APW.ToggleMute),
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("gnome-screensaver-command -l") end),
+    awful.key({"Control"},"Escape",function() awful.util.spawn("gnome-system-monitor") end)
 )
 
 clientkeys = awful.util.table.join(
@@ -449,11 +455,14 @@ do
     "fcitx -d",
     "python2 /home/gsc/goagent-6/local/proxy.py",
     "start-pulseaudio-x11",
+    "/usr/bin/gnome-keyring-daemon --start --components=gpg",
     "/usr/bin/gnome-keyring-daemon --start --components=ssh",
+    "/usr/bin/gnome-keyring-daemon --start --components=secrets",
     "python2 /home/gsc/local/startup.py",
     "gnome-sound-applet",
-    "gnome-power-manager",
-    "launchy",
+    "gnome--manager",
+    "synapse",
+    "gnome-screensaver",
     --and so on...
   }
 
