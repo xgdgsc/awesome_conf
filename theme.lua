@@ -73,8 +73,8 @@ theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/defau
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
 --theme.wallpaper = "/usr/share/awesome/themes/default/background.png"
-theme.wallpaper = "/home/gsc/Downloads/wallpaper/Road.jpg"
-
+--theme.wallpaper = "/home/gsc/Downloads/wallpaper/Road.jpg"
+theme.wallpaper = "/usr/share/archlinux/wallpaper/Arch-Linux-Classic-Wallpaper.png"
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
 theme.layout_fairv = "/usr/share/awesome/themes/default/layouts/fairvw.png"

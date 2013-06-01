@@ -297,7 +297,8 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioLowerVolume",  APW.Down),
     awful.key({ }, "XF86AudioMute",         APW.ToggleMute),
     awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("gnome-screensaver-command -l") end),
-    awful.key({"Control"},"Escape",function() awful.util.spawn("lxtask") end)
+    awful.key({"Control"},"Escape",function() awful.util.spawn("lxtask") end),
+    awful.key({"Control", "Mod1"},"f",function() awful.util.spawn("nautilus") end)
 )
 
 clientkeys = awful.util.table.join(
