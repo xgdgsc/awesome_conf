@@ -12,6 +12,18 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
 local APW = require("apw/widget")
+
+-- Run Once
+
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+    findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+end
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -483,12 +495,12 @@ do
     "xfce4-power-manager",
     "synapse",
     "gnome-screensaver",
-    "/opt/screencloud/screencloud.sh"
+    "screencloud"
     --and so on...
   }
 
   for _,i in pairs(cmds) do
-    awful.util.spawn(i)
+     awful.util.spawn(run_once(i))
   end
 end
 
