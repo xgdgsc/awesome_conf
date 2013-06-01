@@ -297,7 +297,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioLowerVolume",  APW.Down),
     awful.key({ }, "XF86AudioMute",         APW.ToggleMute),
     awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("gnome-screensaver-command -l") end),
-    awful.key({"Control"},"Escape",function() awful.util.spawn("gnome-system-monitor") end)
+    awful.key({"Control"},"Escape",function() awful.util.spawn("lxtask") end)
 )
 
 clientkeys = awful.util.table.join(
@@ -479,7 +479,6 @@ do
     "python2 /home/gsc/goagent-6/local/proxy.py",
     "start-pulseaudio-x11",
     "python2 /home/gsc/local/startup.py",
-    "gnome-sound-applet",
     "xfce4-power-manager",
     "synapse",
     "gnome-screensaver",
