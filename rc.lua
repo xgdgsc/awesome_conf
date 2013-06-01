@@ -354,7 +354,14 @@ for i = 1, 9 do
                       if client.focus and tag then
                           awful.client.toggletag(tag)
                       end
-                  end))
+                  end),
+	awful.key({ "Mod1", }, "Tab",
+		  function ()
+		     awful.client.focus.history.previous()
+		     if client.focus then
+			client.focus:raise()
+		     end
+		  end))
 end
 
 clientbuttons = awful.util.table.join(
