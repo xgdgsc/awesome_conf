@@ -39,7 +39,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("/home/gsc/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
@@ -473,9 +473,10 @@ do
     "start-pulseaudio-x11",
     "python2 /home/gsc/local/startup.py",
     "gnome-sound-applet",
-    "gnome--manager",
+    "xfce4-power-manager",
     "synapse",
     "gnome-screensaver",
+    "/opt/screencloud/screencloud.sh"
     --and so on...
   }
 
